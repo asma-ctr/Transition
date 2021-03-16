@@ -1,0 +1,106 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, skyblue, cornflowerblue);
+    overflow: hidden;
+}
+
+
+.cloud.one{
+    top: 10%;
+    width:300px;
+    height: 100px;
+    animation-duration: 10s;
+
+}
+
+.cloud::before{
+    content: ' ';
+    position: absolute;
+    top: -30%;
+    left: 10%;
+    width: 40%;
+    height: 130%;
+    background: white;
+    border-radius: 50%;
+
+}
+
+.cloud{
+    position: absolute;
+    left: 0;
+    background: white;
+    border-radius: 1000px;
+    animation: zoomies 5s infinite linear;
+    opacity:.75;
+}
+
+@keyframes zoomies{
+    from{
+        left: 0;
+        transform: translate(-100%);
+    }
+}
+
+
+#box{
+    width: 150px;
+    height: 150px;
+    background: darkred;
+    transition: width 0.3s;
+   
+}
+
+#box:hover{
+    width: 300px;
+    background: darkgrey;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: 200;
+}
+#circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: darkolivegreen;
+    position: relative;
+    animation-name: move;
+    animation-duration: 3s;
+ 
+   
+
+}
+@keyframes move{
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:0px;}
+    75%  {background-color:green; left:0px; top:0px;}
+    100% {background-color:rgb(156, 12, 84); left:0px; top:0px;}
+}
+
+*, * ::before, *::after{
+    box-sizing: border-box;
+}
+
+.progress{
+   background-color: darkgrey;
+   border-radius: 20px;
+   height: 30px;
+   width: 300px;
+
+}
+.progress-done{
+    background: linear-gradient(to left, lightpink, #ff9472);
+    box-shadow: 0 3px 3px -5px lightpink, #ff9472;
+    height: 100%;
+    width: 100px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+    transition: 1s ease 0.3s;
+    font: white;
+}
